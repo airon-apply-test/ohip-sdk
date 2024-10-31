@@ -43,7 +43,7 @@ jobs:
         run: yarn build
 
       - name: Upload build.log as an artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: build-log
           path: build.log
