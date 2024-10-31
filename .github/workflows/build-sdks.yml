@@ -1,4 +1,4 @@
-name: Build sdks and push to release branch
+name: Build sdks and push to release branch - test
 
 on:
   push:
