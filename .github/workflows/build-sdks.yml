@@ -36,6 +36,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install yarn
+        run: npm install -g yarn
+
       - name: Install deps
         run: yarn install
 
@@ -50,6 +53,10 @@ jobs:
 
       - name: Compile
         run: yarn compile
+
+      - name: Uninstall yarn 
+        if: always()
+        run: npm uninstall -g yarn
 
       - name: Get hospitality-api-docs's commit sha
         id: ohip_commit
